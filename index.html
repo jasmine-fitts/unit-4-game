@@ -1,65 +1,72 @@
 <!DOCTYPE hmtl>
 <hmtl lang="en-us">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Crystals Collector</title>
+        <title>Crystals Collector</title>
 
-    <!---CSS Stylesheets-->
+        <!---CSS Stylesheets-->
 
-    <link rel="stylesheet" text="type/css" href="assets/css/reset.css">
-    <link rel="stylesheet" text="type/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-
+        <link rel="stylesheet" text="type/css" href="assets/css/reset.css">
+        <link rel="stylesheet" text="type/css" href="assets/css/style.css">
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                        <h1>Crystals Collector!</h1>
-                </div>
-            </div>
-        </div> 
+        <body>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
+            <div id=header>
+                <h1>Crystal Collector!</h1>
+            </div>
+
+            <div class="container">
+                <div id="instructions">
+                        
                         <p>You will be given a random number at the start of the game</p>
-          
+            
                         <p>There are four (4) crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
-                       
+                    
                         <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random numner.</p>
                         
                         <p>The value of each crystal is hiddnet from you until you click on it.</p>
-                     
+                    
                         <p>Each time the game starts, the game will change the value of the crystals.</p>
-                </div>
-            </div>
-            <div class="col-md-5"></div>
-            <div class="row">
-                <div class="col-md-4">
-                     <!--Insert IMG placeholder-->
                     </div>
-                <div class="col-md-3">
-                        <!--Insert Player's Score Counter-->
-                 </div>
-                <div class="col-md-5">
-                </div>
-            
-                </div>
             </div>
 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div id="randomNumber"></div>
+                        </div>
+                        <div class="cold-md-2">
+                            <div id="scoreCounter">
+                                Wins
+                                <p class="wins">0</p>
+                                Losses
+                                <p class="losses">0</p>
+                            </div>
+                        <div class="col-md-5"></div>
+                        </div>
+                    </div>
+                </div>
 
+                <div id="crystal-buttons">
+                    <div type="button" class="box"></div>
 
-            <div class="cystals"></div>
-            <div id="score-counter">
-                <p>Wins:</p>
-               
-                <p>Losses</p>
+                    <div type="button" class="box"></div>
+
+                    <div type="button" class="box"></div>
+
+                    <div type="button" class="box"></div>
+
+                </div>
+            
             
             </div>
-        </div>
-    </body>
+            <script src="assets/javascript/game.js"></script>
+        </body>
 </hmtl>
