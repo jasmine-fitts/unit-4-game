@@ -31,9 +31,8 @@ totalScore = 0;
 
 $("#wins").text(wins);
 $("#losses").text(losses);
-function reset (){
-    
-};
+
+
 
 //The player clicks on a crystal and it adds an amount to the player's total score
 
@@ -133,4 +132,7 @@ $("#yellowCrystal").on("click", function() {
 //The game restarts whenever the player wins or loses
 
 
+function reset (){
+    
 
+};
