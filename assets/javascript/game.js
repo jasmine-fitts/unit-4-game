@@ -14,10 +14,9 @@ var losses = 0;
 var randomNumber;
 var totalScore = [""];
 
+
 $("#wins").text(wins);
 $("#losses").text(losses);
-
-
 
 
 //Each crystal has a random value between 1-12
@@ -37,9 +36,11 @@ $("#redCrystal").on("click", function() {
 
     if (totalScore === randomNumber) {
         alert("You Win!");
+        Wins++
     }
      else if (totalScore > randomNumber) {
          alert("You Lost :(");
+         losses++
      }   
     
 });
@@ -51,9 +52,11 @@ $("#blueCrystal").on("click", function() {
 
     if (totalScore === randomNumber) {
         alert("You Win!");
+        wins++
     }
      else if (totalScore > randomNumber) {
          alert("You Lost :(");
+         losses++
      }   
    
 });
@@ -65,9 +68,11 @@ $("#greenCrystal").on("click", function() {
 
     if (totalScore === randomNumber) {
         alert("You Win!");
+        wins++
     }
      else if (totalScore > randomNumber) {
          alert("You Lost :(");
+         losses++
      }   
     
 });
@@ -79,9 +84,11 @@ $("#yellowCrystal").on("click", function() {
 
     if (totalScore === randomNumber) {
         alert("You Win!");
+        wins++
     }
-     else if (totalScore > randomNumber) {
+     else if(totalScore > randomNumber) {
          alert("You Lost :(");
+         losses++
      }   
     
 });
@@ -99,26 +106,24 @@ $("#yellowCrystal").on("click", function() {
 
 //The player wins if their total score matches the random number
 
-function winner() {
-    alert("You Won!!!");
-    wins++
-    $('#wins').text(wins);
-    reset();
+function win() {
+    alert("You won!!");
+    wins
 }
+
 
 //The palyer loses if their score goes above the random number
 
-function loser () {
-    alert("You Lost!");
-    losses++;
-    $('#losses').text(losses);
-    reset()
-}
 
 
 //The game restarts whenever the player wins or loses
 function reset() {
-    randomNumber = Math.floor(Math.random()* 101+ 19);
+    totalScore = Math.floor(Math.random() * 101 + 19);
+console.log(totalScore);
 
+var redCrystal = Math.floor(Math.random() * 12 + 1)
+var blueCrystal = Math.floor(Math.random() * 12 + 1)
+var greenCrystal = Math.floor(Math.random() * 12 + 1)
+var yellowCrystal = Math.floor(Math.random() * 12 + 1)
 }
 
