@@ -32,11 +32,13 @@
                     
                         <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random numner.</p>
                         
-                        <p>The value of each crystal is hiddnet from you until you click on it.</p>
+                        <p>The value of each crystal is hidden from you until you click on it.</p>
                     
                         <p>Each time the game starts, the game will change the value of the crystals.</p>
                     </div>
             </div>
+
+           
 
                 <div class="container">
                     <div class="row">
@@ -46,9 +48,9 @@
                         <div class="cold-md-2">
                             <div id="scoreCounter">
                                 Wins
-                                <p class="wins">0</p>
+                                <span id="wins">0</span>
                                 Losses
-                                <p class="losses">0</p>
+                                <span id="losses">0</span>
                             </div>
                         <div class="col-md-5"></div>
                         </div>
@@ -65,11 +67,11 @@
 
                     <img src="assets/images/yellow.png" class="crystals" id="yellowCrystal" alt="Yellow Crystal">
                 </div>
+            <div class="totalScore">
+                Your Total Score: 
+                <span id="finalTotal"></span>
+            </div>
             
-            <div class="container">
-                <div id="totalScore">
-                        <h5>Your Total Score:</h5>
-                </div>
             </div>
 
                 

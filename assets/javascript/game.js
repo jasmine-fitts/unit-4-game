@@ -2,6 +2,7 @@ $(document).ready(function() {
 
  //The player is shown a random number at the start of the game and it is between 19-120
     var randomNumber = Math.floor(Math.random() * 101+ 19);
+
     console.log(randomNumber);
 
 //Displays random number into the randomNumber id in the html file
@@ -21,58 +22,69 @@ $("#losses").text(losses);
 
 //Each crystal has a random value between 1-12
 
-var crystals = ["assets/images/blue.png", "assests/images/green.png", "assets/images/red.pgn", "assets/images/yellow.png"];
-
 var redCrystal = Math.floor(Math.random() * 12 + 1)
 var blueCrystal = Math.floor(Math.random() * 12 + 1)
 var greenCrystal = Math.floor(Math.random() * 12 + 1)
 var yellowCrystal = Math.floor(Math.random() * 12 + 1)
 
 totalScore = 0;
-$("#finalScore").text(totalScore)
-
 
 
 $("#redCrystal").on("click", function() {
-    randomNumber = redCrystal + totalScore
-    $("totalScore").text(totalScore)
-    console.log(randomNumber)
+    totalScore = totalScore + redCrystal
+    console.log("New total " + totalScore);
+    $("#finalTotal").text(totalScore);
 
-    $("#finalScore")
+    if (totalScore === randomNumber) {
+        alert("You Win!");
+    }
+     else if (totalScore > randomNumber) {
+         alert("You Lost :(");
+     }   
     
 });
 
 $("#blueCrystal").on("click", function() {
-    randomNumber = totalScore + blueCrystal
-    console.log(randomNumber)
+    totalScore = totalScore + blueCrystal
+    console.log("New total " + totalScore);
+    $("#finalTotal").text(totalScore);
+
+    if (totalScore === randomNumber) {
+        alert("You Win!");
+    }
+     else if (totalScore > randomNumber) {
+         alert("You Lost :(");
+     }   
    
 });
 
 $("#greenCrystal").on("click", function() {
-    randomNumber = totalScore + greenCrystal
-    console.log(randomNumber)
+    totalScore = totalScore + greenCrystal
+    console.log("New total " + totalScore);
+    $("#finalTotal").text(totalScore);
+
+    if (totalScore === randomNumber) {
+        alert("You Win!");
+    }
+     else if (totalScore > randomNumber) {
+         alert("You Lost :(");
+     }   
+    
 });
 
 $("#yellowCrystal").on("click", function() {
-    randomNumber = totalScore + yellowCrystal
-    console.log(randomNumber)
+    totalScore = totalScore + yellowCrystal
+    console.log("New total " + totalScore);
+    $("#finalTotal").text(totalScore);
+
+    if (totalScore === randomNumber) {
+        alert("You Win!");
+    }
+     else if (totalScore > randomNumber) {
+         alert("You Lost :(");
+     }   
+    
 });
-
-
-
-   
-
-    $(".redcrystal").on('click', function () {
-        var randomValue = Math.floor(Math.random() * 11 + 1);
-        ('data-random');
-
-    })
-
-var randomValue = Math.floor(Math.random() * 12 + 1);
-    console.log(randomValue);
-
-
-
 
 
 })
